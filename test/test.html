@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>跳转页面</title>
+</head>
+<body>
+<h1>欢迎访问我们的页面</h1>
+
+<script>
+  // 检查URL中的参数
+  function getQueryParam(param) {
+    const urlParams = new URLSearchParams(window.location.search);
+    return urlParams.get(param);
+  }
+
+  // 如果URL中有参数"showPopup=true"，就弹出一个提示框
+  if (getQueryParam('showPopup') === 'true') {
+    alert('这是一个弹窗提示！');
+  }
+</script>
+</body>
+</html>

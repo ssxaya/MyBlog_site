@@ -25,11 +25,11 @@ info:
 # Docs: https://redefine-docs.ohevan.com/basic/defaults
 defaults:
   # Favicon
-  favicon: /images/redefine-favicon.svg
+  favicon: /images/MIKA.webp
   # Site logo
   logo:
   # Site avatar
-  avatar: /images/redefine-avatar.svg
+  avatar: /images/MIKA.webp
 # IMAGE CONFIGURATION <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< end
 
 
@@ -75,7 +75,7 @@ global:
     scale: false # scale effect
   # Scroll progress
   scroll_progress:
-    bar: false # progress bar
+    bar: true # progress bar
     percentage: true # percentage
   # Website counter
   website_counter:
@@ -202,6 +202,28 @@ navbar:
     Home:
       path: /
       icon: fa-regular fa-house # can be empty
+    Tags:
+      path: /tags
+      icon: fa-regular fa-tags
+#    Masonry:
+#      path: /masonry
+#      icon: fa-regular fa-images
+#    Categories:
+#      path: /categories
+#      icon: fa-regular fa-folders
+#    Bookmarks:
+#      icon: fa-solid fa-bookmark
+#      path: /bookmarks
+    AboutMe:
+      path: /aboutme
+      icon: fa-regular fa-user # can be empty
+    Links:
+      icon: fa-regular fa-link
+      submenus:
+        Masonry: /masonry
+        Categories: /categories
+        Bookmarks: /bookmarks
+        FriendLinks: /links
     # Archives:
     #   path: /archives
     #   icon: fa-regular fa-archive # can be empty
@@ -242,6 +264,18 @@ home:
     announcement: # Announcement text
     show_on_mobile: true # Whether to show sidebar navigation on mobile sheet menu
     links:
+      Tags:
+        path: /tags
+        icon: fa-regular fa-tags # can be empty
+      Archives:
+        path: /categories
+        icon: fa-regular fa-layer-group # can be empty
+      Pictures:
+        path: /masonry
+        icon: fa-regular fa-layer-images # can be empty
+      AboutMe:
+        path: /aboutme
+        icon: fa-regular fa-user # can be empty
     # Archives:
     #   path: /archives
     #   icon: fa-regular fa-archive # can be empty
@@ -391,9 +425,9 @@ footer:
   # Show website running time
   runtime: true # show website running time or not
   # Icon in footer, write fontawesome icon code here
-  icon: '<i class="fa-solid fa-heart fa-beat" style="--fa-animation-duration: 0.5s; color: #f54545"></i>'
+  icon: '<i class="fa-solid fa-sync fa-spin"></i>'
   # The start time of the website, format: YYYY/MM/DD HH:mm:ss
-  start: 2022/8/17 11:45:14
+  start: 2025/3/24 15:32:00
   # Site statistics
   statistics: true # show site statistics or not (total articles, total words)
   # Footer message

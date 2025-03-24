@@ -1,0 +1,51 @@
+#- category: 分类名称
+#  icon: fa-folder # 分类的图标，使用 FontAwesome 图标
+#  items:
+#    - name: 书签名称
+#      link: 链接地址 # 从 url 改为 link
+#      description: 书签描述
+#      image: 图标链接 # 从 icon 改为 image，用于显示网站图标
+
+- category: Code
+  icon: fa-code # 工具分类的图标
+  items:
+    - name: Github
+      link: https://github.com/ # 书签链接地址
+      description: GitHub是一个在线软件源代码托管服务平台，用于公开程序或软件的代码
+      image: https://github.com/favicon.ico
+    - name: Vercel
+      link: https://vercel.com/ # 书签链接地址
+      description: 一个支持静态网站和动态网站的应用部署、预览和上线的云服务平台
+      image: https://vercel.com/favicon.ico
+    - name: FontAwesome.com
+      link: https://fontawesome.com/ # 书签链接地址
+      description: Font Awesome 是一个流行的图标字体库，用于网页设计和开发
+      image: https://fontawesome.com/favicon.ico
+
+- category: LLMs
+  icon: fa-solid fa-brain-circuit # 工具分类的图标
+  items:
+    - name: ChatGPT
+      link: https://chat.openai.com # 书签链接地址
+      description: OpenAI开发的人工智能聊天机器人ChatGPT
+      image: https://chat.openai.com/favicon.ico # 网站图标地址
+    - name: Claude
+      link: https://www.anthropic.com/
+      description: Anthropic推出的人工智能助手Claude
+      image: https://www.anthropic.com/favicon.ico
+    - name: Deepseek
+      link: https://www.deepseek.com/ # 书签链接地址
+      description: 深度求索（DeepSeek）研发的 AI 对话智能助手
+      image: https://www.deepseek.com/favicon.ico # 网站图标地址
+
+- category: ACG
+  icon: fa-palette # 工具分类的图标
+  items:
+    - name: 萌娘百科
+      link: https://mzh.moegirl.org.cn/ # 书签链接地址
+      description: 是泛ACGN向Wiki（百科）站点，主要收录ACGN及相关网络文化
+      image: https://mzh.moegirl.org.cn/favicon.ico
+    - name: Vercel
+      link: https://vercel.com/ # 书签链接地址
+      description: 一个支持静态网站和动态网站的应用部署、预览和上线的云服务平台
+      image: https://vercel.com/favicon.ico
