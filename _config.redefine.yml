@@ -88,8 +88,8 @@ global:
   single_page: true
   # Whether to enable Preloader.
   preloader:
-    enable: false
-    custom_message: # Custom message. If empty, the site title will be displayed
+    enable: true
+    custom_message: Welcome to Yanxiao_xaya's Blog # Custom message. If empty, the site title will be displayed
   # Whether to enable open graph
   open_graph:
     enable: true
@@ -329,12 +329,12 @@ articles:
   # Author label
   author_label:
     enable: true # Whether to enable
-    auto: false # Whether to automatically add author label, e.g. Lv1, Lv2, Lv3...
-    list: []
+    auto: true # Whether to automatically add author label, e.g. Lv1, Lv2, Lv3...
+    list: ["Level 1","Level 2","Level 3","Level 4","Level 5","Level 6"]
   # Code block settings
   code_block:
     copy: true # Whether to enable code block copy button
-    style: mac # mac | simple
+    style: simple # mac | simple
     highlight_theme: # Color scheme for highlightjs code highlighting. For preview, see https://highlightjs.org/examples
       light: github # light mode theme, support: github, atom-one-light, default
       dark: vs2015 # dark mode theme, support: github-dark, monokai-sublime, vs2015, night-owl, atom-one-dark, nord, tokyo-night-dark, a11y-dark, agate
@@ -378,7 +378,7 @@ articles:
 # Docs: https://redefine-docs.ohevan.com/posts/comment
 comment:
   # Whether to enable comment
-  enable: true
+  enable: false
   # Comment system
   system: waline # waline, gitalk, twikoo, giscus
   # System configuration
