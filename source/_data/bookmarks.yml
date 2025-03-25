@@ -21,6 +21,10 @@
       link: https://fontawesome.com/ # 书签链接地址
       description: Font Awesome 是一个流行的图标字体库，用于网页设计和开发
       image: https://fontawesome.com/favicon.ico
+    - name: Shields
+      link: https://shields.io/ # 书签链接地址
+      description: Shields.io 是一个生成自定义徽章的工具
+      image: https://shields.io/img/logo.png
 
 - category: LLMs
   icon: fa-solid fa-brain-circuit # 工具分类的图标
