@@ -45,7 +45,7 @@
       link: https://mzh.moegirl.org.cn/ # 书签链接地址
       description: 是泛ACGN向Wiki（百科）站点，主要收录ACGN及相关网络文化
       image: https://mzh.moegirl.org.cn/favicon.ico
-    - name: Vercel
-      link: https://vercel.com/ # 书签链接地址
-      description: 一个支持静态网站和动态网站的应用部署、预览和上线的云服务平台
-      image: https://vercel.com/favicon.ico
+    - name: Pixiv
+      link: https://www.pixiv.net/ # 书签链接地址
+      description: pixiv提供丰富的在线艺术资源，是世界上最大的艺术分享社区之一
+      image: https://www.pixiv.net/favicon.ico
