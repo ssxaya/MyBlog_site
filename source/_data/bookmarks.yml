@@ -13,6 +13,10 @@
       link: https://github.com/ # 书签链接地址
       description: GitHub是一个在线软件源代码托管服务平台，用于公开程序或软件的代码
       image: https://github.com/favicon.ico
+    - name: CloudFlare
+      link: https://dash.cloudflare.com/ # 书签链接地址
+      description: Cloudflare是一家提供内容分发网络（CDN）、互联网安全性、抗DDoS（分布式拒绝服务）和分布式DNS服务的美国公司
+      image: https://dash.cloudflare.com/favicon.ico
     - name: Vercel
       link: https://vercel.com/ # 书签链接地址
       description: 一个支持静态网站和动态网站的应用部署、预览和上线的云服务平台
