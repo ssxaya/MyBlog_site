@@ -4,6 +4,7 @@ date: 2025-03-25 23:07:30
 tags: [区块链,学习]
 categories: [学习]
 sticky: 9
+mathjax: true
 excerpt: "指针也就是内存地址，指针变量是用来存放内存地址的变量。"
 ---
 ## Hash 哈希
@@ -40,10 +41,12 @@ Crypto - currency
 
 ​	这里的碰撞指的是x，y两个不同的值经过哈希算法后结果相等
 
-​	即： 
+​	即：
+<br>
 $$
 x ≠ y  \quad 与 \quad  hash（x） = hash（y）
 $$
+<br>
 > ​	在这里，`hash`指的是哈希函数，经过hash函数计算出的哈希值很难在参数不同的情况下获得相	同的值
 
 ​	这种特性可以实现 **massage digest** - 信息摘要（又称信息指纹），用来检测文件完整性，是否被篡改	等等
@@ -68,6 +71,7 @@ $$
 ### Digital Commitment - 数字签名
 
 例如想要确定x是否等于y，但又不想公开x和y的信息；可以通过hash（x）与 hash（y）进行比对，
+<br>
 $$
 当 \quad hash（x） = hash（y），那么\quad x = y
 $$
