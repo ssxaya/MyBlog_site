@@ -272,7 +272,7 @@ home:
         icon: fa-regular fa-layer-group # can be empty
       Pictures:
         path: /masonry
-        icon: fa-regular fa-layer-images # can be empty
+        icon: fa-regular fa-images # can be empty
       AboutMe:
         path: /aboutme
         icon: fa-regular fa-user # can be empty
