@@ -405,8 +405,7 @@ time.sleep(5)
 
 ## 隐式等待implicitly_wait()
 
-隐式等待是 WebDriver
-提供的一种全局等待机制，它允许在指定的时间内，如果元素未立即可用，WebDriver
+隐式等待是 WebDriver 提供的一种全局等待机制，它允许在指定的时间内，如果元素未立即可用，WebDriver
 会定期尝试查找元素，直到超时。该方法的设置是全局性的，适用于 WebDriver
 实例的整个生命周期。
 
@@ -427,8 +426,8 @@ time.sleep(5)
 ## 显示等待
 
 显式等待提供了更精细的控制，允许测试者根据具体的条件来等待元素的可用性。使用显式等待时，通常需要导入
-WebDriverWait 和 expected_conditions（简称 EC）模块。WebDriverWait
-的函数语法如下：
+WebDriverWait 和 expected_conditions（简称 EC）模块。
+WebDriverWait 的函数语法如下：
 
 ```python
 from selenium.webdriver.support.ui import WebDriverWait           # 导入 WebDriverWait
