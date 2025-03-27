@@ -78,7 +78,7 @@ driver.get("https://www.baidu.com")
 
 <br>
 
-# 第二章 元素的定位
+# 第一章 元素的定位
 
  <br>
 
@@ -351,15 +351,15 @@ CSS Selector 是一种通过样式选择器规则，定位和操作 HTML
 
 通过这两种方法，CSS选择器和XPath为自动化测试提供了精确且强大的元素定位手段，使得测试脚本能够灵活地与网页元素进行交互。
 
-  <br>
+<br>
 
-  <br>
+<br>
 
- <br>
+# 第二章 三大时间等待
 
-## 3.1为什么要时间等待
+<br>
 
- ![Static Badge](https://img.shields.io/badge/状态-待整理-red?style=flat-square)
+## 为什么要时间等待
 
 在自动化测试过程中，由于外部环境的不可控性，页面或元素的加载时间可能会超出预期。若脚本在元素尚未完全加载时尝试进行操作，可能会导致操作失败。因此，引入等待机制是必要的，以确保测试脚本能够在元素准备就绪后再执行相应的操作。
 
@@ -367,24 +367,31 @@ CSS Selector 是一种通过样式选择器规则，定位和操作 HTML
 
 **强制等待**、**隐式等待**和 **显式等待**
 
-##  
+<br>
 
-##  
+<br>
 
-## 3.2 强制等待sleep()
+## 强制等待sleep()
 
 强制等待是一种简单但不够灵活的等待方法，通过设置固定时间暂停脚本执行的一种方式，直到等待时间结束后才继续执行后续代码。
 
 如果想要使用强制等待，我们需要导入time模块的sleep方法再去使用sleep()
 
-![](media/image20.png){width="3.5625in" height="0.9166666666666666in"}
+```python
+from time import sleep
+# 强制等待5秒
+sleep(5)
+```
 
- 
+```python
+import time
+# 强制等待5秒
+time.sleep(5)
+```
 
-![](media/image21.png){width="3.5729166666666665in"
-height="0.9583333333333334in"}
+> 两种使用强制等待的方法
 
-*两种使用强制等待的方法*
+<br>
 
 可以预测，这种方法的不足之处在于：
 
@@ -392,52 +399,51 @@ height="0.9583333333333334in"}
 
 - **效率问题**：设置过长或过短的等待时间都会影响测试的效率。
 
- 
+<br>
 
-##  
+<br>
 
-## 3.3 隐式等待implicitly_wait()
+## 隐式等待implicitly_wait()
 
 隐式等待是 WebDriver
 提供的一种全局等待机制，它允许在指定的时间内，如果元素未立即可用，WebDriver
 会定期尝试查找元素，直到超时。该方法的设置是全局性的，适用于 WebDriver
 实例的整个生命周期。
 
-![](media/image22.png){width="3.6770833333333335in"
-height="0.23958333333333334in"}
+`driver.implicitly_wait(10)`
 
-*设置了隐式等待最大时间为10秒*
+> *设置了隐式等待最大时间为10秒*
 
 然而，隐式等待存在以下限制：
 
 - **全局性**：隐式等待对所有元素查找操作都有效，但并非所有元素都需要等待。
 
-- **条件限制**：隐式等待只能检测元素是否存在于 HTML
-  源码中，而无法判断元素是否可点击或可见，这可能导致在尝试操作元素时抛出异常。
+- **条件限制**：隐式等待只能检测元素是否存在于 HTML 源码中，而无法判断元素是否可点击或可见，这可能导致在尝试操作元素时抛出异常。
 
- 
+<br>
 
-##  
+<br>
 
-## 3.4显示等待
+## 显示等待
 
 显式等待提供了更精细的控制，允许测试者根据具体的条件来等待元素的可用性。使用显式等待时，通常需要导入
 WebDriverWait 和 expected_conditions（简称 EC）模块。WebDriverWait
 的函数语法如下：
 
-![](media/image23.png){width="6.583333333333333in"
-height="0.4791666666666667in"}
+```python
+from selenium.webdriver.support.ui import WebDriverWait           # 导入 WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC    # 导入 EC
+```
 
-*导入了webdriverwait和ec模块*
+> *导入了webdriverwait和ec模块*
 
- 
+<br>
 
-### 3.4.1WebDriverWait 与EC
+### WebDriverWait 与EC
 
-WebDriverWait 的函数语法如下：
+`WebDriverWait` 的函数语法如下：
 
-WebDriverWait(**driver**, **timeout**, **poll_frequency**=0.5,
-**ignored_exceptions**=None)
+`WebDriverWait(driver, timeout, poll_frequency=0.5, ignored_exceptions =None)`
 
 - **driver**：指向浏览器驱动的 WebDriver 实例。
 
@@ -447,69 +453,76 @@ WebDriverWait(**driver**, **timeout**, **poll_frequency**=0.5,
 
 - **ignored_exceptions**（可选）：在等待期间忽略的异常类型。
 
- 
+<br>
 
 EC 提供了多种方法来定义等待条件，例如 EC.element_to_be_clickable
 用于判断目标元素是否可点击。如果条件满足，则返回 True；否则，返回
 False。
 
- 
+<br>
 
-### 3.4.2显示等待的使用方法
+### 显示等待的使用方法
 
 以下是一个显式等待的使用示例：
 
-![](media/image24.png){width="5.708333333333333in" height="0.75in"}
+```python
+wait = WebDriverWait(driver,timeout:10)
+element = wait.until(EC.element_to_be_clickable ((By.ID, 'signIn')))
+element.click()
+```
 
-在这个示例中，WebDriverWait 会在接下来的 10 秒内，每隔 0.5
-秒检查一次，判断 ID 为 signIn 的按钮是否可点击。如果条件满足，则执行
-.click() 方法；如果条件不满足，则抛出 TimeoutException。
+在这个示例中，WebDriverWait 会在接下来的 10 秒内，每隔 0.5 秒检查一次，判断 ID 为 signIn 的按钮是否可点击。
 
- 
+如果条件满足，则执行 .click() 方法；
 
- 
+如果条件不满足，则抛出 TimeoutException 异常。
 
-下拉滚动条
+<br>
 
-2024年11月27日
-
-14:46
+<br>
 
 # 第三章 下拉滚动条与下拉框
 
- 
+<br>
 
-3.1下拉滚动条
+## 下拉滚动条
 
- 
 
-3.1.1为什么在sleenium中要使用下拉滚动条？
+
+### 为什么在sleenium中要使用下拉滚动条？
 
 我们举一个例子
 
 在新浪网的页面底部有一个文本为上海的超链接，点击它会跳转到新浪上海的主页。
 
-![](media/image25.png){width="4.760416666666667in" height="2.65625in"}
+![](https://img.ssxaya.fun/PicGo/posts/selenium-图片25.png)
 
-*新浪网的页面底部，有一个名为"上海"的超链接*
+> *新浪网的页面底部，有一个名为"上海"的超链接*
 
-![](media/image26.png){width="4.75in" height="2.0833333333333335in"}
+<br>
 
-*点进去会跳转到新浪上海的主页*
+![](https://img.ssxaya.fun/PicGo/posts/selenium-图片26.png)
 
-如果我们尝试利用自动化脚本达成这种操作
+> *点进去会跳转到新浪上海的主页*
 
-![](media/image27.png){width="5.0in" height="0.9583333333333334in"}
+<br>
 
- 
+如果我们尝试利用自动化脚本达成这种操作：
+
+```python
+driver.get('https://www.sina.com.cn/')
+driver.find_element(By.LINK_TEXT,"上海").click()
+```
+
+<br>
 
 则会抛出错误：
 
-![](media/image28.png){width="5.0in" height="0.6979166666666666in"}
+![](https://img.ssxaya.fun/PicGo/posts/selenium-图片28.png)
 
-报错原因是element click intercepted
+报错原因是`element click intercepted`
 
-译为：元素的点击被拦截
+译为：**元素的点击被拦截**
 
 这说明该元素无法 被点击，有可能是元素被遮挡不可见导致的
 
@@ -519,68 +532,9 @@ False。
 
 而在selenium 中，有两种方式可以滚动我们页面的滚动条
 
- 
 
-3.1.2 通过模拟用户操作按键达成滚动页面
 
- 
+### 通过模拟用户操作按键达成滚动页面
 
- 
 
- 
-
-回收站
-
-2024年11月17日
-
-0:22
-
-## 1.1python解释器 
-
-Python 是一种解释型、面向对象、动态数据类型的高级程序设计语言。
-
-而Python解释器是运行Python代码的工具，负责将高级语言的Python代码逐行翻译为计算机可以执行的底层指令，实现代码的执行和使用。
-
- 
-
-### 1.1.1下载python解释器
-
-通过[Welcome to Python.org](https://www.python.org/)进入python网站
-
-根据你的操作系统以及位数下载适合你的python解释器
-
-![](media/image29.png){width="8.3125in" height="4.552083333333333in"}
-
-### 1.1.2python解释器的安装
-
- 
-
- 
-
- 
-
-## 1.2PyCharmIDE
-
- 
-
-### 1.2.1pycharm下载
-
- 
-
- 
-
-expected_conditions
-
-2024年11月17日
-
-20:46
-
- 
-
- 
-
-下拉滚动条
-
-2024年11月18日
-
-18:55
+![Static Badge](https://img.shields.io/badge/状态-待更新-brightgreen?style=flat-square)
