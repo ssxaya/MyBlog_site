@@ -1,7 +1,7 @@
 ---
-title: 【python·自动化测试】  selenium的基本使用
+title: 【功能测试】  selenium的基本使用
 date: 2025-03-26 23:50:26
-tags: [python,学习]
+tags: [功能测试,python,学习]
 categories: [学习]
 excerpt: "selenium 是用于在 Web 浏览器上执行可以模拟用户操作自动化测试的一种开源工具。"
 ---
