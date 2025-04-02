@@ -14,6 +14,8 @@ template: aboutme   ·
 学生开发者 · 软件技术专业 · 自动化测试
 Python | C | JAVA | SQL | Web
 
+
+
 <!-- 
 
 ### 内容
@@ -36,13 +38,14 @@ Python | C | JAVA | SQL | Web
  我的哔哩哔哩   ·  [@ 颜笑XAYA](https://space.bilibili.com/359322078)
 
 
-
+<br>
 ───
+<br><br><br>
 
 > *本博客旨在分享个人见解、技术探索和学习心得，为自己和他人提供启发和思考。期待与读者交流和共同进步。  
 > *所有内容遵循[知识共享协议](https://creativecommons.org/licenses/by-nc-sa/4.0/)
 <div align="center">
-<a href="mailto:yanxiaoxaya@outlook.com">Email</a>  |  GitHub  |  Twitter
+<a href="mailto:yanxiaoxaya@outlook.com">Email</a>  |  <a href="https://github.com/ssxaya">GitHub</a>  |  <a href="https://space.bilibili.com/359322078">Bilibili</a>
 </div>
 
 <script>
