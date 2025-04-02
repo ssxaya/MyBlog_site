@@ -13,6 +13,10 @@
       link: https://github.com/ # 书签链接地址
       description: GitHub是一个在线软件源代码托管服务平台，用于公开程序或软件的代码
       image: https://github.com/favicon.ico
+    - name: Gitee
+      link: https://gitee.com/ # 书签链接地址
+      description: Gitee(码云)是由开源中国于2013年推出的基于Git的代码托管平台，它提供了中国本土化的代码托管服务，旨在帮助开发者和企业更高效地管理和协作代码
+      image: https://gitee.com/favicon.ico
     - name: CloudFlare
       link: https://dash.cloudflare.com/ # 书签链接地址
       description: Cloudflare是一家提供内容分发网络（CDN）、互联网安全性、抗DDoS（分布式拒绝服务）和分布式DNS服务的美国公司
