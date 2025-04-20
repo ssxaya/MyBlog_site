@@ -21,7 +21,7 @@ excerpt: "backstopjs是一个基于 JavaScript (Node.js)语言的视觉回归测
 
 # 0基础使用BackStopJS
 
-如果你有一定基础、想快速使用backstopjs的话，请直接跳转到[**快速启动**](#快速启动)标题来获取最简洁的使用方式[待更新]
+如果你有一定基础、想快速使用backstopjs的话，请直接跳转到[**快速启动**](#快速启动)标题来获取最简洁的使用方式
 
 ## Backstopjs是什么
 
