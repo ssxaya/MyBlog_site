@@ -6,9 +6,22 @@ categories: [学习]
 excerpt: "backstopjs是一个基于 JavaScript (Node.js)语言的视觉回归测试工具，主要用于在应用程序的界面发生变化时进行自动化测试，它通过对比不同版本的网页截图来检测 UI 的视觉差异，帮助开发人员在页面的修改中发现潜在的视觉问题。"
 ---
 
+
+
+> #####  环境
+> BackstopJS v6.3.25
+>
+> python 3.13
+>
+> windows version11  -  24H2
+
+
+
+
+
 # 0基础使用BackStopJS
 
-如果你有一定基础、想快速使用backstopjs的话，请直接跳转到**快速启动**标题来获取最简洁的使用方式[待更新]
+如果你有一定基础、想快速使用backstopjs的话，请直接跳转到[**快速启动**](#快速启动)标题来获取最简洁的使用方式[待更新]
 
 ## Backstopjs是什么
 
@@ -334,12 +347,118 @@ value对应的是backstop_data目录下的脚本路径，默认在backstop_data\
 
 <br>
 
-可以发现这个测试failed了，原因是每次刷新页面百度页面的内容总会随机变化，导致两次测试内容不同
+可以发现这个测试完成并failed了
+
+> 原因是每次刷新页面百度页面的内容总会随机变化，导致两次测试内容不同
+
+<br>
+
+## 快速启动
+
+如果仅仅想快速使用backstopjs，请先确保你的环境下载了nodejs，并跳转到你需要工作的项目目录，并按照以下步骤来
+
+<br>
+
+### 安装
+
+```bash
+# 安装工具
+npm install -g backstopjs
+# 创建工具文件夹
+mkdir BackstopJS
+# 初始化工具
+backstop init
+```
+
+### 修改配置文件
+
+替换`backstop_config.json`文件代码并修改内容（分辨率、url等）
+
+```json
+{
+  "id": "backstop_default",
+  "viewports": [
+    {
+      "label": "定义你的分辨率",
+      "width": 1920,
+      "height": 1080
+    }
+  ],
+  "onBeforeScript": "puppet/onBefore.js",
+  "onReadyScript": "puppet/onReady.js",
+  "scenarios": [
+    {
+      "label": "BackstopJS Homepage",
+      "cookiePath": "backstop_data/engine_scripts/cookies.json",
+      "url": "定义你的被测网址",
+      "referenceUrl": "",
+      "readyEvent": "",
+      "readySelector": "",
+      "delay": 0,
+      "hideSelectors": [],
+      "removeSelectors": [],
+      "hoverSelector": "",
+      "clickSelector": "",
+      "postInteractionWait": 0,
+      "selectors": [],
+      "selectorExpansion": true,
+      "expect": 0,
+      "misMatchThreshold" : 0.1,
+      "requireSameDimensions": true
+    }
+  ],
+  "paths": {
+    "bitmaps_reference": "backstop_data/bitmaps_reference",
+    "bitmaps_test": "backstop_data/bitmaps_test",
+    "engine_scripts": "backstop_data/engine_scripts",
+    "html_report": "backstop_data/html_report",
+    "ci_report": "backstop_data/ci_report"
+  },
+  "report": ["browser"],
+  "engine": "puppeteer",
+  "engineOptions": {
+    "args": ["--no-sandbox"]
+  },
+  "asyncCaptureLimit": 5,
+  "asyncCompareLimit": 50,
+  "debug": false,
+  "debugWindow": false
+}
+
+```
+
+### 设置基准图片
+
+```cmd
+mkdir ".\backstop_data\bitmaps_reference"
+```
+
+创建如下文件夹，并且把基准图片名设为`backstop_default_BackstopJS_Homepage_0__0_.png`后放入此文件夹中
+
+<br>
+
+## 运行
+
+```cmd
+backstop test
+```
+
+稍等片刻即可跳出测试报告
+
+<br>
+
+<br>
 
 <br>
 
 以上
 
+
+![Static Badge](https://img.shields.io/badge/状态-待更新-brightgreen?style=flat-square)
+
+<div align="center">
+<a href="mailto:yanxiaoxaya@outlook.com">Email</a>  |  <a href="https://github.com/ssxaya">GitHub</a>  |  <a href="https://space.bilibili.com/359322078">Bilibili</a>
+</div>
 
 
 
