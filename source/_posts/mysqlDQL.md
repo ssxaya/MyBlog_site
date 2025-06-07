@@ -12,6 +12,12 @@ excerpt: "DQL（数据查询语言）是 SQL 中用于从数据库中提取数�
 
 本篇是以 [MYSQL黑马程序员](https://www.bilibili.com/video/BV1Kr4y1i7ru)教学视频整理而成的笔记
 
+[配套的sql文件](https://raw.githubusercontent.com/ssxaya/FileShare/main/mysqlDQL%E4%B8%8A.sql)
+
+```bash
+wget https://raw.githubusercontent.com/ssxaya/FileShare/main/mysqlDQL%E4%B8%8A.sql
+```
+
 
 
 
@@ -48,25 +54,25 @@ SELECT [字段列表] FROM [表名列表] WHERE [条件列表 GROUP BY [分组�
 ![Static Badge](https://img.shields.io/badge/快速索引-light?style=flat-square)
 
 [**SELECT**](# 基本查询 SELECT...FROM...)
-	[字段列表]
+[字段列表]
 
 [**FROM**](# 基本查询 SELECT...FROM...)
-	[表名列表]
+[表名列表]
 
 [**WHERE**](# 条件查询 WHERE)
-	[条件列表]
+[条件列表]
 
 [**GROUP BY**](# 分组查询 GROUP BY  &  聚合函数)
-	[分组字段列表]
+[分组字段列表]
 
 [**HAVING**](# 分组查询 GROUP BY  &  聚合函数)
-	[分组后条件列表]
+[分组后条件列表]
 
 [**ORDER BY**](# 排序查询 ORDER BY)
-	[排序字段列表]
+[排序字段列表]
 
 [**LIMIT**](# 分页查询 LIMIT)
-	[分页参数]
+[分页参数]
 
 
 
@@ -77,7 +83,7 @@ SELECT [字段列表] FROM [表名列表] WHERE [条件列表 GROUP BY [分组�
 
 ---
 
-### 查询多个字段	
+### 查询多个字段
 
 **语法：**
 
@@ -98,9 +104,9 @@ FROM emp;
 ![](https://img.ssxaya.fun/PicGo/posts/DQL-2.png)
 
 > 如果想要查询所有字段返回，可以使用通配符*
-> 
+>
 > `SELECT * FROM 表名`
-> 
+>
 > 返回表名中所有的字段
 
 
@@ -431,6 +437,7 @@ SELECT gender, COUNT(*) AS 员工数量
 FROM emp
 GROUP BY gender;
 ```
+
 ![](https://img.ssxaya.fun/PicGo/posts/DQL-18.png)
 
 ------
@@ -488,7 +495,7 @@ HAVING COUNT(*) >= 3;
 ### 例题
 
 
- **查询所有员工的姓名和年龄，并按年龄从小到大排序**
+**查询所有员工的姓名和年龄，并按年龄从小到大排序**
 
 ```mysql
 SELECT name, age
@@ -521,7 +528,7 @@ ORDER BY gender ASC, age DESC;
 
 ---
 
- **查询所有员工的姓名和入职时间，按入职时间从新到旧排序（最近入职的排前**
+**查询所有员工的姓名和入职时间，按入职时间从新到旧排序（最近入职的排前**
 
 ```mysql
 SELECT name, entrydate
@@ -675,4 +682,5 @@ LIMIT 3;
 
 
 Fin.
+
 
